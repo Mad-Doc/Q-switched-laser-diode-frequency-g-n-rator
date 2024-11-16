@@ -1,4 +1,4 @@
-simple code for générating complexe pwm signal for controlling Qcw-laser diode
+simple code for generating complexe pwm signal for controlling Qcw-laser diode
 use arduino nano 328p and ssd1315 Oled + rotary encoder 
 
 the code generate pulse a 0 to 20khz frequency at 20% ON of duty cycle auto calculated and linear response !
