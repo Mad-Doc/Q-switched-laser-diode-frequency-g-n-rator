@@ -1,11 +1,25 @@
-simple code for generating complexe pwm signal for controlling Qcw-laser diode
-use arduino nano 328p and ssd1315 Oled + rotary encoder 
+#Q-switcher Laser diode Frequency Generator
 
-the code generate pulse a 0 to 20khz frequency at 20% ON of duty cycle auto calculated and linear response !
-and 10 to 300ns pulse max
-control this to encoder or serial command , originaly for jdsu Qcw-250watt jenoptik laser fibre diode control + laser diode drivers adapted of course !
+un code assez simple pour pouvoir généré un signal PWM complexe pour controller efficacement un laser-diode QCW 
 
-possible other application for complex and stable pwm signal 
+utilise 
+-un arduino nano 328P (pas le 168 ! )
+-un ecran Oled ssd1315
+-un encodeur rotatif 
 
-for good stability of signal , please use  maximum 10nf ceramic or tantal capaçitor on // to output and gnd , and possible small self in serie for filtering upper 20khz harmonic signal ! 
-and use really good 5V psu ! not switching , toroid transfo and good regulation 5V , but only battery is the best ! 
+ce code genere un pulse d'une frequence de 0 a 20khz fluide.
+genere un duty cycle de 0 a 20% max
+genere une largeur de pulse de 10ns a 300ns max 
+et cela auto adaptatif selon la fréquence ou la largeur du pulse
+
+il se controle via un encodeur rotatif ou en commande serie.
+originalement codé pour une diode JDSU QCW-250Watt de chez jenoptik (diode laser QCW fibrée) et son drivers qcw adapter 
+
+d'autre application possible, pour qui a besoin d'un signal pwm "compliquer" mais stable !
+
+pour une bonne stabilité du signal il faut branché un condensateur au tantal en // a la sortie "pwm" et la masse et une petite self de quelque µH en serie entre le µC et le bnc/usage sinon 
+le signal dans les 20khz sera moins propre, un blindage de la partie sortie sera bénéfique aussi !
+il faut utiliser une bonne alimentation 5V tres propre, evité les psu a découpage "bruyante" ! 
+le top etant des batterie ou un transformateur torique et une bonne régulation 5V :)
+ou prévoir un tres bon filtrage de l'alimentation !  
+
