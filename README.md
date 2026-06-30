@@ -1,4 +1,4 @@
-#Q-switcher Laser diode Frequency Generator
+#QCW Laser diode Frequency Generator
 
 un code assez simple pour pouvoir généré un signal PWM complexe pour controller efficacement un laser-diode QCW 
 
